@@ -2,15 +2,15 @@ language: generic
 matrix:
   include:
     - os: linux
-      env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
+      env: COMPILER_NAME=gcc CXX=g++-6 CC=gcc-6
       addons:
         apt:
           sources: &sources
             - llvm-toolchain-precise-3.8
             - ubuntu-toolchain-r-test
           packages:
-            - g++-5
-            - libboost-python-dev
+            - g++-6
+            - boost1.68
     - os: linux
       env: COMPILER_NAME=clang CXX=clang++-6.0 CC=clang-6.0
       addons:
@@ -21,7 +21,7 @@ matrix:
          packages:
             - clang-6.0
             - libstdc++-7-dev
-            - libboost-python-dev
+            - boost1.68
 script:
     - cmake --version
     - mkdir -p build
