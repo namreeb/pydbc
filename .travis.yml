@@ -23,6 +23,7 @@ matrix:
             - libstdc++-7-dev
             - libboost-python-dev
 script:
+    - cmake --version
     - mkdir -p build
     - cd build
     - cmake ..
