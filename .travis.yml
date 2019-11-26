@@ -10,7 +10,7 @@ matrix:
             - ubuntu-toolchain-r-test
           packages:
             - g++-6
-            - libboost-python-dev=1.68
+            - libboost-python-dev=1.67
     - os: linux
       env: COMPILER_NAME=clang CXX=clang++-6.0 CC=clang-6.0
       addons:
@@ -21,7 +21,7 @@ matrix:
          packages:
             - clang-6.0
             - libstdc++-7-dev
-            - libboost-python-dev=1.68
+            - libboost-python-dev=1.67
 script:
     - cmake --version
     - mkdir -p build
