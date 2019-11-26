@@ -83,15 +83,6 @@ class BinaryStream
 };
 
 template <typename T>
-BinaryStream & operator << (BinaryStream &stream, T data)
-{
-    static_assert(std::is_trivially_copyable<T>::value, "T must be trivially copyable");
-
-    stream.Write(data);
-    return stream;
-}
-
-template <typename T>
 BinaryStream & operator >> (BinaryStream &stream,  T &data)
 {
     static_assert(std::is_trivially_copyable<T>::value, "T must be trivially copyable");
