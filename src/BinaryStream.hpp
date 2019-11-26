@@ -90,9 +90,4 @@ BinaryStream & operator >> (BinaryStream &stream,  T &data)
     stream.Read(data);
     return stream;
 }
-
-std::ostream & operator << (std::ostream &, const BinaryStream &);
-BinaryStream & operator << (BinaryStream &, const BinaryStream &);
-BinaryStream & operator << (BinaryStream &, const std::string &);
-std::ostream & operator << (std::ostream &stream, const BinaryStream &data);
 }
